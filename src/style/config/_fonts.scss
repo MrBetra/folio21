@@ -1,0 +1,50 @@
+//---- Font face
+
+//--- usage :
+// @include font-face(fontName, fontPath, fontWeight, fontStyle, fontSources);
+
+//--- exemples :
+// @include font-face("Akkurat", "~@fonts/subset-AkkuratPro-Regular", 400, normal, eot woff woff2 ttf);
+
+// Google Font :
+//@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap');
+
+// BandeinsSans
+@include font-face("BandeinsSans", "../fonts/BandeinsSansLight", 200, light, eot woff woff2);
+@include font-face("BandeinsSans", "../fonts/BandeinsSansRegular", 400, normal, eot woff woff2);
+@include font-face("BandeinsSans", "../fonts/BandeinsSansMedium", 600, medium, eot woff woff2);
+@include font-face("BandeinsSans", "../fonts/BandeinsSansSemiBold", 700, medium, eot woff woff2);
+@include font-face("BandeinsSans", "../fonts/BandeinsSansBold", 800, bold, eot woff woff2);
+
+// Francois One
+@import url('https://fonts.googleapis.com/css?family=Francois+One&display=swap');
+
+// Open Sans
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
+// Yeseva One
+@import url('https://fonts.googleapis.com/css?family=Yeseva+One&display=swap');
+
+// BioRhyme & BioRhyme Expanded
+@import url('https://fonts.googleapis.com/css?family=BioRhyme+Expanded:300,400,700,800|BioRhyme:300,400,700,800&display=swap');
+
+
+
+$font_primary: 'BandeinsSans', sans-serif;
+$font_secondary: 'Francois One', sans-serif;
+$font_terc: 'Open Sans', sans-serif;
+$font_extra: 'BioRhyme', serif;
+$font_extraExtend: 'BioRhyme Expanded', serif;
+
+$light: 200;
+$regular: 400;
+$medium : 500;
+$bold   : 700;
+$xbold   : 800;
+
+
+// Mixin : (font-size : px to rem)
+@mixin rem-size($sizeValue) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 16) + rem;
+}

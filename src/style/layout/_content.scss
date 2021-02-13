@@ -1,0 +1,165 @@
+//--- Colors
+
+$white: #ffffff;
+$black: rgb(27, 27, 27);
+$grey: lighten($black, 60%);
+$darkgrey: darken($white, 50%);
+$lightgrey: lighten($black, 85%);
+
+$c-primary: hsl(231, 93%, 52%);
+//$c-primary: rgba(145, 20, 247, 1);
+$c-secondary: $darkgrey;
+$c-secondary: red;
+
+//--- Sizes
+
+$fullwidth: 1200px;
+
+//--- Spaces
+
+$space: .5rem !default;
+$space-aliases: () !default;
+
+// Compute spacing value
+// space(1) => $space
+// space(2, 1rem) => 2rem
+
+@function space($multiple: 1, $space: $space) {
+  @if map-has-key($space-aliases, $multiple) {
+    $multiple: map-get($space-aliases, $multiple);
+  }
+  @return $multiple * $space;
+}
+
+//--- General settings
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+*::selection {
+  color: $white;
+  background-color: $c-primary;
+}
+
+html, body{
+  height: 100%;
+}
+
+body {
+  background: $black;
+}
+
+img {
+  display  : block;
+  max-width: 100%;
+}
+
+//--- a
+
+%a {
+  @include rem-size(13);
+  font-family: $font_primary;
+  font-weight: $bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  //letter-spacing: 1px;
+  
+  transition: .3s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+%link_hover {
+  position: relative;
+  padding-bottom: space(1);
+
+  &::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: $white;
+    mix-blend-mode: difference;
+
+    transition: transform .3s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  &:hover {
+    &::after {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+  }
+}
+
+.link {
+  z-index: 10;
+}
+
+
+//--- p
+
+%p {
+  font-family: $font_primary;
+  @include rem-size(14);
+  color: $grey;
+  line-height: 1.4rem;
+}
+
+p {
+  @extend %p;
+}
+
+//--- section settings
+
+%section {
+  width: 100vw;
+  color: $white;
+  padding: space(12);
+
+  @include media-max(sm) {
+    padding: space(4);
+  }
+}
+
+.section, section, footer {
+  @extend %section;
+}
+
+//--- footer 
+
+.footer {
+  font-family: $font_primary;
+  background: rgba($darkgrey, .1);
+
+  
+  &__top {
+    @include set-col(s, 4);
+    @include set-col(lg, 6, 7);
+    max-width: max-content;
+
+    justify-self: end;
+  }
+  
+  &__content {
+    a {
+      @extend %link_hover;
+    }
+  }
+}
+

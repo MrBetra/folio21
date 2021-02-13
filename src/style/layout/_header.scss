@@ -1,0 +1,102 @@
+.header {
+  width: 100%;
+  max-width: $fullwidth;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: space(14);
+
+  @include set-col(s, 4);
+  @include set-col(lg, 12);
+
+  @include media-max(sm) {
+    padding-top: space(2);
+    margin-bottom: space(10);
+  }
+
+  &__title {
+    @include set-col(s, 4);
+    @include set-col(lg, 6);
+
+    @include rem-size(60);
+    font-weight: $bold;
+    color: $c-primary;
+
+    .works & {
+      color: $white;
+    }
+
+    .content--dark & {
+      color: $white;
+    }
+
+    @include media-max(lg) {
+      @include rem-size(48);
+    }
+
+  }
+
+  &__desc {
+    position: relative;
+
+    @include set-col(s, 4);
+    @include set-col(lg, 6);
+
+    @include media-min(lg) {
+      margin-top: auto;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+
+      width: 5vw;
+      height: 1px;
+
+      background: rgba($white, .1);
+      //opacity: .3;
+      transform: translate(0, 40px);
+
+      @include media-max(xs) {
+        // display: none;
+        top: 100%;
+        left: 0;
+        width: 150px;
+        transform: translate(0, 50px);
+      }
+    }
+
+    .content--dark & {
+      color: $white;
+
+      &:after {
+        background: rgba($white, .1);
+      }
+    }
+  }
+}
+
+.header__title___num {
+  position: relative;
+  display: block;
+  width: max-content;
+  line-height: space(4);
+  font-family: $font_primary;
+  font-weight: $bold;
+  
+  @include rem-size(16);
+  margin-bottom: space(-1);
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: space(-2);
+    content: "";
+    display: block;
+    height: 1px;
+    width: space(1);
+    background: currentColor;
+    mix-blend-mode: color-dodge;
+  }
+}

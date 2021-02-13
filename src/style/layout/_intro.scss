@@ -1,0 +1,139 @@
+.intro {
+  min-height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &__header {
+    max-width: $fullwidth;
+
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__nav {
+    a {
+      padding-bottom: space(1);
+      @extend %a;
+      @extend %link_hover;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      list-style: none;
+
+      li {
+        padding: space(1);
+        margin-left: space(3);
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__presa {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: $fullwidth;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    .paralax-title {
+      @include rem-size(45);
+      font-weight: $regular;
+      margin-top: auto;
+      transform-origin: left;
+
+      max-width: 700px;
+
+      @include media-max(xs) {
+        @include rem-size(22);
+      }
+
+      .header__title___num {
+        line-height: space(9);
+        color: rgba($lightgrey, .5);
+
+        @include media-max(xs) {
+          display: none;
+        }
+
+        &::before {
+          display: none;
+          background: rgba($lightgrey, .5);
+        }
+      }
+    }
+
+    .scroll {
+      @extend %a;
+      @extend %link_hover;
+
+      width: max-content;
+      margin-top: auto;
+      margin-bottom: 2rem;
+
+      pointer-events: visible;
+      z-index: 0;
+    }
+  }
+
+  &_img {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 100vh;
+    width: 50vw;
+
+    overflow: hidden;
+    z-index: -1;
+    
+    @include media-max(sm) {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: block;
+      content: "";
+
+      height: 100%;
+      width: 100%;
+      
+      background: rgba($c-primary, .7);
+      //mix-blend-mode: screen;
+      z-index: 1;
+    }
+
+    .img_bg {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      
+      object-position: center center;
+      object-fit     : cover;
+      overflow: hidden;
+    }
+  }
+}
+
+

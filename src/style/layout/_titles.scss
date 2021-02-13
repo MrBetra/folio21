@@ -1,0 +1,35 @@
+//--- titres
+
+h1 {
+  @include rem-size(20);
+  font-family: $font_primary;
+  font-weight: $xbold;
+  margin: 0;
+}
+
+h2 {
+  @include rem-size(32);
+  font-family: $font_extraExtend;
+  font-weight: $light;
+
+  @include media-max(xs) {
+    @include rem-size(26);
+  }
+
+  & a {
+    font-weight: $bold;
+  }
+}
+
+h3 {
+  @include rem-size(12);
+  font-family: $font_primary;
+  font-weight: $regular;
+  text-transform: uppercase;
+  letter-spacing: space(0.35);
+}
+
+h4 {
+  @include rem-size(20);
+  font-family: $font_extra;
+}

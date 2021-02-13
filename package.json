@@ -11,6 +11,8 @@
   "author": "Rémi Lejeune",
   "license": "ISC",
   "dependencies": {
+    "gsap": "^3.6.0",
+    "imagesloaded": "^4.1.4",
     "lodash": "^4.17.20",
     "path": "^0.12.7"
   },
@@ -20,6 +22,7 @@
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
     "cssnano": "^4.1.10",
+    "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^1.3.5",
     "node-sass": "^5.0.0",
     "postcss": "^8.2.5",

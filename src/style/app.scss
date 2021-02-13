@@ -2,3 +2,21 @@
 @import "settings/global";
 @import "settings/fonts";
 
+@import "./config/_breakpoints";
+@import "./config/_grid.scss";
+@import "./config/font-face";
+@import "./config/_fonts";
+@import "./layout/_titles";
+@import "./layout/_content";
+@import "./cursor/_cursor_v2";
+@import "./config/_skewScroll";
+
+@import "./layout/_header";
+@import "./layout/_footer";
+
+@import "./layout/_intro";
+@import "./layout/_works";
+@import "./layout/_parcours";
+@import "./layout/_social";
+
+

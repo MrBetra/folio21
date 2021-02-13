@@ -1,24 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Getting Started</title>
-    <link rel="stylesheet" href="app.css">
-  </head>
-  <body>
-    <div class="wrapper">
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Author: Rémi Lejeune, Portfolio 2020 Digital designer Front-end developpeur">
+    <title class="link" data-hover>Rémi Lejeune - Digital designer et front-end developpeur</title>
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body id="body" data-scroll>
+  <main data-scroll-content>
 
-      <header>
+    <section id="intro" class="intro section fixed">
+
+      <header class="intro__header">
+        <h1>Rémi Lejeune</h1>
+        <nav class="intro__nav">
+          <ul>
+            <!-- <li><a href="#" class="nav__item link" data-hover>Réalisations</a></li> -->
+            <!-- <li><a href="#" class="nav__item link" data-hover>A propos</a></li> -->
+          </ul>
+        </nav>
       </header>
 
-      <main>
-        <h1>Hello friend.</h1>
-      </main>
+      <div class="intro__presa reveal_scale">
+        <h2 class="paralax-title">Digital designer & développeur front-end</h2>
+        <a href="#works" class="scroll link" data-hover>scroll</a>
+      </div>
 
-      <footer>
-      </footer>
+      <div class="intro_img">
+        <span class="overlay"></span>
+        <img class="img_bg" src="./assets/intro_bg.jpg" alt="Photo d'introduction" />
+      </div>
 
-    </div>
-    <script src="index.js"></script>
-  </body>
+    </section>
+
+    <section id="works" class="works section">
+
+      <header class="header grid">
+        <h2 class="header__title skew"><span class="header__title___num">01.</span> works</h2>
+        <p class="header__desc">Selection de quelques-une de mes réalisations</p>
+      </header>
+
+      <article class="works__item left grid">
+
+        <header class="works__header">
+          <h2 class="works__title">Peugeot</h2>
+          <p class="works__intro">Refonte visuel du site de vente des véhicules de stock Peugeot.
+                                Avec une approche mobile, un focus sur les grands visuels et une clarté des informations.
+          </p>
+          <ul class="works__desc">
+            <li>
+              <h4 class="title">Réalisation</h4>
+              <p class="desc">UI / UX</p>
+            </li>
+            <li>
+              <h4 class="title">Agence</h4>
+              <p class="desc">HAVAS</p>
+            </li>
+            <li>
+              <h4 class="title">Client</h4>
+              <p class="desc">Peugeot</p>
+            </li>
+          </ul>
+        </header>
+
+        <!-- <div class="works__image"></div> -->
+        <div class="works__image" data-hover>
+          <img src="./assets/job/peugeot.jpg" alt="Aperçu du design Peugeot">
+        </div>
+
+      </article>
+
+      <article class="works__item right grid">
+
+        <header class="works__header">
+          <h2 class="works__title ">wifi.brussels</h2>
+          <p class="works__intro">Refonte visuel du site de vente des véhicules de stock Peugeot.
+            Avec une approche mobile, un focus sur les grands visuels et une clarté des informations.
+          </p>
+          <ul class="works__desc">
+            <li>
+              <h4 class="title">Réalisation</h4>
+              <p class="desc">Front-end</p>
+            </li>
+            <li>
+              <h4 class="title">Agence</h4>
+              <p class="desc">Spade</p>
+            </li>
+            <li>
+              <h4 class="title">Client</h4>
+              <p class="desc">CIRB</p>
+            </li>
+          </ul>
+        </header>
+
+        <div class="works__image" data-hover>
+          <img src="./assets/job/peugeot.jpg" alt="Aperçu du design Peugeot">
+        </div>
+
+      </article>
+
+      <article class="works__item left grid">
+
+        <header class="works__header">
+          <h2 class="works__title">Peugeot</h2>
+          <p class="works__intro">Refonte visuel du site de vente des véhicules de stock Peugeot.
+            Avec une approche mobile, un focus sur les grands visuels et une clarté des informations.
+          </p>
+          <ul class="works__desc">
+            <li>
+              <h4 class="title">Réalisation</h4>
+              <p class="desc">UI / UX</p>
+            </li>
+            <li>
+              <h4 class="title">Agence</h4>
+              <p class="desc">HAVAS</p>
+            </li>
+            <li>
+              <h4 class="title">Client</h4>
+              <p class="desc">Peugeot</p>
+            </li>
+          </ul>
+        </header>
+
+        <div class="works__image" data-hover>
+          <img src="./assets/job/peugeot.jpg" alt="Aperçu du design Peugeot">
+        </div>
+
+      </article>
+
+    </section>
+  </div>
+
+    <section id="content" class="content section">
+
+      <header class="header grid">
+        <h2 class="header__title skew"><span class="header__title___num">02.</span> parcours</h2>
+        <p class="header__desc">Les références de mes expériences & formations</p>
+      </header>
+
+      <div class="content__liste grid">
+        <div class="content__col-1">
+          <h3>Expériences</h3>
+          <ul class="col">
+            <li class="col__item">
+              <h4>Spade</h4>
+              <p>Front-end Dev</p>
+              <time datetime="2019">2020</time>
+            </li>
+            <li class="col__item">
+              <h4>HAVAS</h4>
+              <p>Web & Graphic designer freelance</p>
+              <time datetime="2014 - 2018">2014 - 2018</time>
+            </li>
+            <li class="col__item">
+              <h4>Sinapse</h4>
+              <p>Webdesigner freelance</p>
+              <time datetime="2013 - 2016">2013 - 2018</time>
+            </li>
+            <li class="col__item">
+              <h4>The Manifest</h4>
+              <p>Webdesigner</p>
+              <time datetime="2013 - 2016">2013 - 2016</time>
+            </li>
+          </ul>
+        </div>
+
+        <div class="content__col-2">
+          <h3>Formations</h3>
+          <ul class="col">
+            <li class="col__item">
+              <h4>CEPEGRA</h4>
+              <p>Front-end Dev</p>
+              <time datetime="2019">2019 - 4 mois</time>
+            </li>
+            <li class="col__item">
+              <h4>HEAJ</h4>
+              <p>Web & Multimedia</p>
+              <time datetime="2014 - 2018">2006 - 2011</time>
+            </li>
+          </ul>
+        </div>
+
+    </section>
+
+    <section class="content content--dark section alt">
+
+      <header class="header grid">
+        <h2 class="header__title skew"><span class="header__title___num">03.</span>internets</h2>
+        <p class="header__desc">Retrouvez-moi sur les internets :</p>
+      </header>
+
+      <div class="content__liste grid">
+        <div class="content__col-1">
+          <ul class="col">
+            <li class="col__item">
+              <h4 data-hover>
+                <a href="" title="">Dribbble</a>
+              </h4>
+            </li>
+            <li class="col__item">
+              <h4 data-hover>
+                <a href="" title="">Codepen</a>
+              </h4>
+            </li>
+          </ul>
+        </div>
+
+        <div class="content__col-2">
+          <ul class="col">
+            <li class="col__item">
+              <h4 data-hover>
+                <a href="" title="" >Facebook</a>
+              </h4>
+            </li>
+            <li class="col__item">
+              <h4 data-hover>
+                <a href="" title="" >Instagram</a>
+              </h4>
+            </li>
+            <li class="col__item">
+              <h4 data-hover>
+                <a href="" title="" >LinkedIn</a>
+              </h4>
+            </li>
+          </ul>
+        </div>
+
+    </section>
+
+    <footer class="footer section">
+
+      <div class="footer__content grid">
+        <a href="#body" class="footer__top" data-hover>Revenir en haut</a>
+      </div>
+
+    </footer>
+
+  </main>
+  <canvas class="js-canvas"></canvas>
+  <script src="./index.js"></script>
+</body>
 </html>
