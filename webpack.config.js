@@ -60,9 +60,9 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: '/assets/fonts/',
+              outputPath: '/fonts/',
               publicPath: '../fonts/',
-              context: path.resolve(__dirname, './dist/assets/fonts/')
+              context: path.resolve(__dirname, './dist/fonts/')
             }
           }
         ]
